@@ -39,6 +39,5 @@ def load_catalog(path, mag_limit=None):
     if mag_limit is not None and 'mag' in df.columns:
         df = df[pd.to_numeric(df['mag'], errors='coerce') <= mag_limit]
 
-    out = df[['mag', 'x', 'y', 'z']].copy()
-    out = out.reset_index(drop=True)
-    return out
+    df = df.reset_index(drop=True)
+    return df
