@@ -159,3 +159,13 @@ An OpenCV window shows the rendered image. Press any key to close.
 | `n_matches` | Number of stars successfully matched to the catalog |
 | `n_centroids` | Total number of star candidates detected in the image |
 | `success` | `True` if attitude was solved; `False` if identification or solver failed |
+
+---
+
+## Acknowledgments
+
+- **HYG Star Catalog v4.2** — David Nash, [astronexus.com](https://www.astronexus.com/projects/hyg). Combines the Hipparcos, Yale Bright Star, and Gliese catalogues into a single dataset of ~120,000 stars.
+
+- **Pedrotty et al. (2021)** — Samuel Pedrotty, Ronney Lovelace, John Christian, Grace Quintero, Devin Renshaw. *Design and Performance of an Open-Source Star Tracker Algorithm on Commercial Off-the-Shelf Cameras and Computers.* [PMC7866273](https://pmc.ncbi.nlm.nih.gov/articles/PMC7866273/)
+
+- **Star tracker algorithm reference** — [Sciencedirect](https://www.sciencedirect.com/science/article/abs/pii/S0019103519305329)
