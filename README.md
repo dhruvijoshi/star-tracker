@@ -1,5 +1,7 @@
 # Star Tracker
 
+**Live demo:** [startracker.streamlit.app](https://startracker.streamlit.app/)
+
 A star tracker simulator for spacecraft and satellites. It renders a synthetic night-sky image using a real star catalog, then runs the full attitude-determination pipeline on that image — the same pipeline a real flight star tracker uses.
 
 **Star catalog:** [HYG v4.2](https://www.astronexus.com/projects/hyg) (Hipparcos / Yale / Gliese, ~120 000 stars)

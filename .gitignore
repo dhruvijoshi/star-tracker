@@ -1,4 +1,7 @@
 .venv
 __pycache__
 data/images/
-data/catalog/
+data/catalog/hygdata_v42.csv
+data/catalog/hygdata_v42_clean.csv
+data/catalog/hygdata_v42_compact_mag8_dist200.npz
+data/catalog/hygdata_v42_compact_mag8_dist200_tree.pkl
