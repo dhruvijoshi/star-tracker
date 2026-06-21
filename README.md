@@ -59,7 +59,8 @@ RA / Dec / Roll + residual error
 | `src/identifier.py` | Triangle-based lost-in-space identifier; precomputes an N×N inter-star angle table and matches detected triplets to catalog triplets |
 | `src/attitude.py` | Wahba's SVD attitude solver (`wahba`, `attitude_from_matches`, `rotation_to_radec`) |
 | `src/pipeline.py` | Ties the pipeline together: `solve(image, …) → AttitudeResult` |
-| `main.py` | Entry point: renders a random synthetic image, solves attitude, prints result, displays image |
+| `main.py` | CLI entry point: renders a random synthetic image, solves attitude, prints result, displays image |
+| `app.py` | Streamlit web UI: generate synthetic images or upload your own, with interactive noise controls and a live identified-star table |
 
 ---
 
@@ -71,7 +72,7 @@ RA / Dec / Roll + residual error
 pip install -r requirements.txt
 ```
 
-Dependencies: `numpy`, `opencv-python`, `pandas`, `scipy`
+Dependencies: `numpy`, `opencv-python`, `pandas`, `scipy`, `streamlit`
 
 ### 2. Preprocess the catalog
 
@@ -92,11 +93,21 @@ This creates:
 
 ### 3. Run
 
+**Streamlit web app (recommended):**
+
+```bash
+python -m streamlit run app.py
+```
+
+Opens at `http://localhost:8501`. Choose a pointing direction (or randomize), adjust noise parameters, and hit **Generate & Solve** to render a synthetic star field and run the full attitude pipeline. You can also upload your own star image to solve.
+
+**CLI:**
+
 ```bash
 python main.py
 ```
 
-The script picks a random direction, renders a synthetic star field, solves the attitude, and prints the result:
+Picks a random direction, renders a synthetic star field, solves the attitude, and prints the result:
 
 ```
 Loading catalog...  24330 stars loaded.
